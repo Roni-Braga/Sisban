@@ -1,0 +1,1 @@
+web: java -jar out/artifacts/Sisban_jar/Sisban.jar
