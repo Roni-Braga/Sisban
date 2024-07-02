@@ -9,11 +9,12 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
-    private int number;
+    private String number;
     private String agencia;
-    @Column(precision = 2, scale = 13)
+    // 99.999.999.999,99
+    @Column(precision = 13, scale = 2)
     private BigDecimal balance;
-    @Column(name="additional_limit",precision = 2, scale = 13)
+    @Column(name="additional_limit",precision = 13, scale = 2)
     private BigDecimal limit;
 
     public Long getId() {
@@ -24,11 +25,11 @@ public class Account {
         this.id = id;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 

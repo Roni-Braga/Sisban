@@ -9,8 +9,8 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true)
-    private int number;
-    @Column(name="available_limit",precision = 2, scale = 13)
+    private String number;
+    @Column(name="available_limit",precision = 13, scale = 2)
     private BigDecimal limit;
 
     public Long getId() {
@@ -21,11 +21,11 @@ public class Card {
         this.id = id;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
